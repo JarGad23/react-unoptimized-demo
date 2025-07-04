@@ -11,7 +11,7 @@ import {
 function generateExpensiveChartData() {
   // Heavy computation simulation
   const data = [];
-  for (let i = 0; i < 1000; i++) {
+  for (let i = 0; i < 3000; i++) {
     data.push({
       name: `Point ${i}`,
       value: Math.sin(i / 10) * 50 + 50 + Math.random() * 10,

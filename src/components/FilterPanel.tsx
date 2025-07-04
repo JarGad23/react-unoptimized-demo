@@ -10,8 +10,8 @@ import {
 interface FilterPanelProps {
   search: string;
   onSearch: (val: string) => void;
-  sort: string;
-  onSort: (val: "asc" | "desc") => void;
+  sort: "asc" | "desc" | "default";
+  onSort: (val: "asc" | "desc" | "default") => void;
 }
 
 export function FilterPanel({
@@ -33,6 +33,7 @@ export function FilterPanel({
           <SelectValue placeholder="Sort by" />
         </SelectTrigger>
         <SelectContent>
+          <SelectItem value="default">Name Default</SelectItem>
           <SelectItem value="asc">Name Ascending</SelectItem>
           <SelectItem value="desc">Name Descending</SelectItem>
         </SelectContent>
